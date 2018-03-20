@@ -1,0 +1,13 @@
+Your app works nicely and adapts well to rotation. Here's the point breakdown:
+
+Functionality. 20/20
+Multiple scenes. 5/5
+Data passed between scenes. 10/10
+Two or more UI layouts. 15/15
+Adapts to rotation. 10/10
+Settings bundle. 10/10
+One or more of picker, split view, table view, or pop-over. 10/10
+Screen shots. 5/5
+Self-review. 5/5
+
+I was glad to have you in class this term. Have a great summer!

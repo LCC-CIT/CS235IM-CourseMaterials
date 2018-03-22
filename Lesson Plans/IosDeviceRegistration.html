@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Apple Dev Cert Creation</title>
+  </head>
+  <body>
+    <h1>Registering an iOS Device for use with XCode</h1>
+    <p>If you want to test your iOS app on a device, regardless of
+      whether you are developing using Visual Studio with the Xamarin
+      platform or using XCode,&nbsp; you need to register the device on
+      the Apple Developer site.<br>
+    </p>
+    <ol>
+      <li>Create a certificate</li>
+      <ol>
+        <li>Go to the <a href="https://developer.apple.com"
+            target="_blank">Apple Developer web site</a> and log in.</li>
+        <li>On the left side, click on "Certificates, IDs &amp;
+          Profiles"</li>
+        <li>On the left side, under the heading "Devices", select the
+          type of device you want to add<br>
+        </li>
+        <li>Next you need to get the UUID of your device.<br>
+        </li>
+        <ol style="list-style-type: lower-alpha;">
+          <li>Connect your device to your computer using a USB cable</li>
+          <li>Open XCode, click on "Window", then select "Devices and
+            Simulators"<br>
+            <img
+src="file:///Users/admin/Desktop/Screen%20Shot%202018-03-21%20at%205.47.40%20PM.png"
+              alt="XCode, Devices and Simulators" style="width: 377px;
+              height: 377px;"><br>
+            <br>
+          </li>
+          <li>Select your device from the list on the left, then
+            highlight the Identifier (UUID) and press cmd-C to copy it.<br>
+            <img
+src="file:///Users/admin/Desktop/Screen%20Shot%202018-03-21%20at%205.54.37%20PM.png"
+              alt="Device UUID" style=" width: 712px; height: 196px;"><br>
+            <br>
+          </li>
+        </ol>
+        <li>Back on the Apple Developer web page, enter the device name
+          and UUID, then click "Continue"<br>
+          <img
+src="file:///Users/admin/Desktop/Screen%20Shot%202018-03-21%20at%205.55.48%20PM.png"
+            alt="Register device" style=" width: 592px; height: 218px;
+            border: 2px solid;"></li>
+      </ol>
+    </ol>
+    <p>You're done! You can use this device with XCode or Visual Studio.<br>
+      <br>
+    </p>
+  </body>
+</html>

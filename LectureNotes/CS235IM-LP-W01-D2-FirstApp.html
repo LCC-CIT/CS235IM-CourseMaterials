@@ -35,9 +35,10 @@ code {
           <br>
         </b></h1>
       <h1><b> </b> </h1>
-      <div>Lecture Notes<br>
+      <div>
+        <h2>Lecture Notes for Week 01, Session 2</h2>
+        <h2> </h2>
       </div>
-      <div>Brian Bird</div>
       <i><b> </b></i></header>
     <section>
       <article> <br>
@@ -161,6 +162,9 @@ href="https://docs.microsoft.com/en-us/xamarin/ios/get-started/hello-ios/hello-i
       <ul>
         <li>A View Controller</li>
         <li>A stack of views (the <span style="font-style: italic;">Content
+
+
+
             View Hierarchy</span>) which are managed by the View
           Controller<br>
         </li>
@@ -168,6 +172,9 @@ href="https://docs.microsoft.com/en-us/xamarin/ios/get-started/hello-ios/hello-i
       <li>Segues - transitions between scenes</li>
       <ul>
         <li>The first one is called a <span style="font-style: italic;">sourceless
+
+
+
             segue</span></li>
       </ul>
     </ul>
@@ -178,7 +185,7 @@ href="https://docs.microsoft.com/en-us/xamarin/ios/get-started/hello-ios/hello-i
     class. By overriding these methods, you can interact with the view
     objects in the scene.<br>
     <br>
-    These are the basic lifecycle methods:<br>
+    These are the basic life-cycle methods:<br>
     <ul>
       <li>ViewDidLoad - Called once the first time the View Controller
         loads its Content View Hierarchy into memory. This is a good
@@ -189,7 +196,7 @@ href="https://docs.microsoft.com/en-us/xamarin/ios/get-started/hello-ios/hello-i
         screen.</li>
       <li>ViewWillDisappear - Called every time a View Controller's View
         is about to be removed from a Content View Hierarchy and
-        disappear from the screen. This lifecycle event is used for
+        disappear from the screen. This life-cycle event is used for
         cleanup and saving state.</li>
       <li>ViewDidAppear and ViewDidDisappear - Called when a View gets
         added or removed from the Content View Hierarchy, respectively.<br>
@@ -200,6 +207,46 @@ href="https://docs.microsoft.com/en-us/xamarin/ios/get-started/hello-ios/hello-i
       target="_blank">Hello iOS, Deep dive, View Controllers and the
       View Lifecycle</a><br>
     <br>
+    <h3>Event Handlers</h3>
+    <p>When a Name is assigned to a Button control in the Properties
+      Pad, the iOS designer automatically adds a C# property to the
+      ViewController class in ViewController.designer.cs, making the
+      button available inside the ViewController class. <br>
+    </p>
+    <p>Here is an example of an event handler:</p>
+    <code> &nbsp;&nbsp;&nbsp; public override void ViewDidLoad() <br>
+      &nbsp;&nbsp;&nbsp; { <br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; base.ViewDidLoad(); <br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; countButton.TouchUpInside +=
+      TouchHandler;<br>
+      &nbsp;&nbsp;&nbsp; }<br>
+      <br>
+      <br>
+      &nbsp;&nbsp;&nbsp; private void TouchHandler(object sender,
+      EventArgs e) <br>
+      &nbsp;&nbsp;&nbsp; { <br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; count++; <br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; countLabel.Text =
+      count.ToString(); <br>
+      &nbsp;&nbsp;&nbsp; } </code> <br>
+    Or, the event handler could be defined as an anonymous method using
+    a lambda expression<br>
+    <br>
+    <code>
+      &nbsp;&nbsp;&nbsp; public override void ViewDidLoad() <br>
+      &nbsp;&nbsp;&nbsp; { <br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; base.ViewDidLoad(); <br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; countButton.TouchUpInside +=
+      (object sender, EventArgs e) =&gt; <br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; { <br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; count++;
+      <br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+      countLabel.Text = count.ToString(); <br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; };
+      <br>
+      &nbsp;&nbsp;&nbsp; }
+    </code>
     <h2>PhoneWord Exercise</h2>
     Have students do the Hello iOS (Phone Word) exercise<span
       style="font-weight: bold;"><br>
@@ -214,6 +261,9 @@ href="https://docs.microsoft.com/en-us/xamarin/ios/get-started/hello-ios/hello-i
         <li>Edit <span style="font-style: italic;">info.plist</span>, <span
             style="font-style: italic;">Application</span> tab, <span
             style="font-style: italic;">Deployment Target </span>(scroll
+
+
+
           down to see this setting)<br>
           The drop-down list will only show versions that have been
           downloaded to your machine<br>
@@ -221,5 +271,6 @@ href="https://docs.microsoft.com/en-us/xamarin/ios/get-started/hello-ios/hello-i
       </ul>
     </ul>
     <br>
+    By Brian Bird, 2018<br>
   </body>
 </html>

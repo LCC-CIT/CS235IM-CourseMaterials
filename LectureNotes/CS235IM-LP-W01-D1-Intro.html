@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>SQLite</title>
+    <style type="text/css">
+body {
+  font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+#week01 {
+  background-color: #f8ff2e;
+}
+
+code {
+  display:block;
+  font-size: larger;
+  background-color: lightgoldenrodyellow;
+  max-height:400px;
+  width:90%;
+  overflow:scroll;
+}
+
+.exercise {
+  background-color: #c6ffe2;
+}
+
+</style>
+  </head>
+  <body>
+    <header>
+      <h1> <b>CS235IM, Mobile Application Development: iOS
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          <br>
+        </b></h1>
+      <h1><b> </b> </h1>
+      <div>
+        <h2>Lecture Notes for Week 01, Day 1<br>
+        </h2>
+        <h2> </h2>
+      </div>
+      <i><b> </b></i></header>
+    <section>
+      <article> <br>
+        Weeks + Topics<b><br>
+        </b>
+        <table style="width: 807px; height: 127px;" border="1">
+          <tbody>
+            <tr>
+              <td id="week01">1. Intro to iOS app dev with Xamarin<br>
+              </td>
+              <td>6. Tab bars and pickers<br>
+              </td>
+            </tr>
+            <tr>
+              <td id="week02">2. UI Constraints<br>
+              </td>
+              <td id="week07">7. Table views<br>
+              </td>
+            </tr>
+            <tr>
+              <td>3. More UI Controls<br>
+              </td>
+              <td id="week08">8. Navigation and Split-view controllers<br>
+              </td>
+            </tr>
+            <tr>
+              <td>4. Size Classes<br>
+              </td>
+              <td id="week09">9. Application Settings<br>
+              </td>
+            </tr>
+            <tr>
+              <td>5. Multi-view apps<br>
+              </td>
+              <td>10. Term project<br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <b><br>
+        </b>
+        <h2><b></b>Introductions<br>
+        </h2>
+        <ul>
+          <li>Introduce myself</li>
+          <ul>
+            <li>Why I like to program</li>
+            <li>Job history</li>
+          </ul>
+          <li>Student's introduce themselves</li>
+          <ul>
+            <li>What programming languages do they know? How many know
+              C#?</li>
+            <li>Have any done mobile app dev before? (Android, App
+              inventor, Unity, etc.)</li>
+            <li>What degree and/or certificate are they pursing?<br>
+            </li>
+          </ul>
+        </ul>
+        <h2>Intro to mobile development</h2>
+        <ul>
+          <li>Why do mobile development?</li>
+          <ul>
+            <li>It's fun!</li>
+            <li>Mobile apps deliver a personal, immediate experience to
+              users</li>
+            <li>Mobile app developers are in demand.&nbsp;</li>
+            <ul>
+              <li>Search on Dice.com 1/9/16 - out of 586 Software
+                Engineer jobs in Oregon, 578 were asking for iOS app
+                development skills.</li>
+              <li>Companies hire mobile developers to make apps:</li>
+              <ul>
+                <li>As part of a bigger system or eco-system:</li>
+                <ul>
+                  <li>Banking</li>
+                  <li>Book readers</li>
+                  <li>Social media</li>
+                  <li>Cloud storage</li>
+                  <li>Bus schedules</li>
+                </ul>
+                <li>As products themselves</li>
+              </ul>
+            </ul>
+          </ul>
+          <li>Differences between desktop and mobile development</li>
+          <ul>
+            <li>Low power devices require apps that use less memory and
+              processor power and hence less battery.</li>
+            <li>Small screens and a wide variety of form factors and
+              screen rotation require flexible UI designs</li>
+            <li>Older devices: Lack of true multi-tasking requires
+              different app life-cycle management</li>
+            <li>A wide variety of sensors can be used by the app.</li>
+            <li>Connectivity to the Internet is not always assured- apps
+              need to handle intermittent connectivity.</li>
+            <li>Users have higher expectations for responsiveness of the
+              UI.</li>
+          </ul>
+          <li>Development environments</li>
+          <ul>
+            <li>iOS: Swift or Objective C using X-Code</li>
+            <li>Android: Java or Kotlin using Android Studio (intelliJ)</li>
+            <li>Cross-platform using an app engine: Unity, Flutter</li>
+            <li>Cross-platform using HTML5 &amp; JavaScript: Ionic,
+              Apache Cordova or React Native</li>
+            <li>Cross-platform native code: Xamarin. All code except the
+              UI is portable across Windows, Linux, Mac, iOS, and
+              Android<br>
+            </li>
+          </ul>
+        </ul>
+        <h2>Intro to the course</h2>
+        <ul>
+          <li>Review Syllabus</li>
+          <li>Discuss weekly cycle of assignments</li>
+        </ul>
+        <h2>-- Break --<br>
+        </h2>
+        <h2>Development Environment for Xamarin iOS</h2>
+        <ul>
+          <li>Libraries and Frameworks</li>
+          <ul>
+            <li>Mono framework, Open-source port of .NET</li>
+            <li>Xamarin.iOS package<br>
+            </li>
+            <li>Xcode and iOS SDK required</li>
+          </ul>
+          <li>IDEs</li>
+          <ul>
+            <li>Visual Studio for Mac<br>
+            </li>
+            <ul>
+              <li>Based on the former Xamarin Studio which was based on
+                MonoDevelop (Windows, Linux, OS-X)</li>
+            </ul>
+          </ul>
+          <ul>
+            <li>Visual Studio for Windows</li>
+          </ul>
+          <ul>
+            <li>JetBrains Rider</li>
+            <ul>
+              <li>New IDE that has full functionality except for a UI
+                designer</li>
+              <li>Uses Xamarin add-ons</li>
+              <li>Runs on Windows, Mac OS, and LInux</li>
+            </ul>
+          </ul>
+          <li>Testing</li>
+          <ul>
+            <li>Simulator</li>
+            <li>Actual device (requires developer license and
+              provisioning of the device)</li>
+          </ul>
+          <li>Licensing</li>
+          <ul>
+            <li>University license lets you:</li>
+            <ul>
+              <li>&nbsp;Run apps on a simulator or device</li>
+              <li>Share apps with others in the class</li>
+            </ul>
+            <li>Developer license lets you:</li>
+            <ul>
+              <li>Deploy beta apps via iTunes and TestFlight</li>
+              <li>Put apps in the app store</li>
+            </ul>
+            <li>Apple Developer web site: <a
+                href="https://developer.apple.com" target="_blank">https://developer.apple.com</a><br>
+            </li>
+          </ul>
+        </ul>
+        <h3>Exercise<span style="text-decoration: underline;"></span></h3>
+        <h3><span style="text-decoration: underline;"></span></h3>
+        Build a simple app with just a "hello" label and run it on the
+        simulator (we'll use iPads later)<br>
+        <br>
+        <h2>Lab Assignment</h2>
+        Look at Lab 1<br>
+        <br>
+        <br>
+      </article>
+    </section>
+    By Brian Bird, 2018<br>
+  </body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>First App</title>
+    <style type="text/css">
+body {
+  font-family: "Arial", "Helvetica", "sans-serif";
+}
+
+#week02 {
+  background-color: #f8ff2e;
+}
+
+code {
+  display:block;
+  font-size: larger;
+  background-color: lightgoldenrodyellow;
+  max-height:400px;
+  width:90%;
+  overflow:scroll;
+}
+
+.exercise {
+  background-color: #c6ffe2;
+}
+
+</style>
+  </head>
+  <body>
+    <header>
+      <h1> <b>CS235IM, Mobile Application Development: iOS
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+          <br>
+        </b></h1>
+      <h1><b> </b> </h1>
+      <div>
+        <h2>Lecture Notes for Week 02, Day 2</h2>
+        <h2> </h2>
+      </div>
+      <i><b> </b></i></header>
+    <section>
+      <article> <br>
+        Weeks + Topics<b><br>
+        </b>
+        <table style="width: 807px; height: 127px;" border="1">
+          <tbody>
+            <tr>
+              <td id="week01">1. Intro to iOS app dev with Xamarin<br>
+              </td>
+              <td>6. Tab bars and pickers<br>
+              </td>
+            </tr>
+            <tr>
+              <td id="week02">2. Events, Controls, and UI Constraints<br>
+              </td>
+              <td id="week07">7. Table views<br>
+              </td>
+            </tr>
+            <tr>
+              <td>3. More UI Controls<br>
+              </td>
+              <td id="week08">8. Navigation and Split-view controllers<br>
+              </td>
+            </tr>
+            <tr>
+              <td>4. Size Classes<br>
+              </td>
+              <td id="week09">9. Application Settings<br>
+              </td>
+            </tr>
+            <tr>
+              <td>5. Multi-view apps<br>
+              </td>
+              <td>10. Term project<br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <b><br>
+        </b>
+        <ul>
+        </ul>
+        <div>
+          <h2><b>Overview</b></h2>
+        </div>
+        <ul>
+          <b>
+            <li><a href="#topic1">Introduction</a></li>
+            <li><a href="#topic2"><span style="color: rgb(0, 0, 238);"><span
+                    style="text-decoration: underline;">Review</span></span></a><br>
+            </li>
+            <li><a href="#topic3">Events</a></li>
+            <li><span style="color: rgb(0, 0, 238);"><span
+                  style="text-decoration: underline;">UI Constraints</span></span><br>
+            </li>
+            <li><span style="color: rgb(0, 0, 238);"><span
+                  style="text-decoration: underline;">References</span></span><br>
+            </li>
+            <br>
+          </b>
+        </ul>
+      </article>
+    </section>
+    <h2><b> Introduction</b></h2>
+    <h3> </h3>
+    <ul>
+      <li>Review due dates on Moodle</li>
+      <li>Discuss the code review process and due date</li>
+    </ul>
+    <h2 id="topic2">Review<br>
+    </h2>
+    <ul>
+      <li>Operating Systems, APIs, Libraries, and Frameworks</li>
+      <ul>
+        <li>Every operating system has low level APIs.<br>
+        </li>
+        <li>For difficult operations like graphics, there are libraries
+          and frameworks: DirectX, OpenGL on Windows, Cocoa / AppKit on
+          Mac OS<br>
+        </li>
+        <li>For building apps there are frameworks that consist of a
+          collection of libraries that implement a particular
+          architecture for building an app: like WinForms or WPF on
+          Windows, or <a
+            href="https://developer.apple.com/documentation/uikit"
+            target="_blank">UI Kit</a> in the iOS SDK</li>
+      </ul>
+      <li>Xamarin provides a way to add the .NET library and C# run-time
+        as a layer on top of the IOS SDK. <a
+          href="https://developer.xamarin.com/api/root/ios-unified"
+          target="_blank">https://developer.xamarin.com/api/root/ios-unified</a></li>
+    </ul>
+    <p><br>
+    </p>
+    <h3> App Architecture</h3>
+    <h3> </h3>
+    <ul>
+      <li>MVC</li>
+      <ul>
+        <li>Model: A class or set of complex classes that just hold data</li>
+        <li>View: Just presents the information (like a web page)</li>
+        <li>Controller: Responds to user input and does processing</li>
+      </ul>
+      <li>Advantages of MVC</li>
+      <ul>
+        <li>Reduce dependencies</li>
+        <li>View → Model ← Controller<br>
+          &nbsp;&nbsp; ^________________|<br>
+        </li>
+      </ul>
+    </ul>
+    <ul>
+      <ul>
+        <li>Facilitates changes (bug fixes, new features)</li>
+        <li>Separation of concerns (simplifies coding)</li>
+        <li>Facilitates reusable code and cross-platform development
+          (only the View is non-portable)</li>
+      </ul>
+      <li>Outlets and Actions</li>
+      <ul>
+        <li>Outlets are properties that contain references to UI
+          objects. You work with these in the Controller code instead of
+          working directly with UI objects.</li>
+        <li>Actions are the event handlers.</li>
+      </ul>
+      <li>Storyboard- look at it for phoneword, look at the<span
+          style="font-style: italic;"> </span><span style="font-style:
+          italic;">D</span><span style="font-style: italic;">ocument </span><span
+          style="font-style: italic;">O</span><span style="font-style:
+          italic;">utline</span><br>
+      </li>
+      <ul>
+        <li>ViewController- loads and unloads content view hierarchies</li>
+        <li>Screen (scene)<br>
+        </li>
+      </ul>
+      <ul>
+        <ul>
+          <li>Content View Hierarchy&nbsp;&nbsp;&nbsp;&nbsp;</li>
+          <ul>
+            <li>Root view</li>
+            <ul>
+              <li>Subviews<br>
+              </li>
+            </ul>
+          </ul>
+        </ul>
+      </ul>
+    </ul>
+    <h2>Events<br>
+    </h2>
+    <ul>
+      <li>Actions vs. .NET style events</li>
+      <ul>
+        <li>.NET style event handler using a lambda expression<br>
+          (Example in PhoneWord, ViewController.cs, ViewDidLoad)</li>
+        <li><code>&nbsp;&nbsp;&nbsp; public override void ViewDidLoad()
+            <br>
+            &nbsp;&nbsp;&nbsp; { <br>
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; base.ViewDidLoad(); <br>
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+            countButton.TouchUpInside += (object sender, EventArgs e)
+            =&gt; <br>
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; { <br>
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; //
+            Do something here<br>
+            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }; <br>
+            &nbsp;&nbsp;&nbsp; } </code></li>
+        <li>Create events using the events tab of the properties dialog
+          in the storyboard<br>
+          (Example in Ch. 4, Control Fun 2016)<br>
+        </li>
+        <li><code>&nbsp;&nbsp;&nbsp; partial void
+            someButton_TouchUpInside(UIButton sender)<br>
+            &nbsp;&nbsp;&nbsp; {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Do
+            something here<br>
+            &nbsp;&nbsp;&nbsp; }<br>
+          </code></li>
+      </ul>
+      <li>Responders</li>
+      <ul>
+        <li>A responder is an object that responds to user input and is
+          an instance of a class that inherits from UIResponder. This
+          includes UIView, UiViewController, and UIApplciation objects.</li>
+        <li>FirstResponder - UIKit automatically directs events to the
+          most appropriate responder object, known as the first
+          responder. <br>
+        </li>
+        <li>Responder chain - a dynamic configuration of your app’s
+          responder objects<br>
+        </li>
+        <ul>
+          <li>UIKit defines rules for how objects are passed from one
+            responder to the next</li>
+          <ul>
+            <li>You can&nbsp; change those rules by overriding the
+              appropriate properties in your responder objects<br>
+            </li>
+          </ul>
+          <li>Unhandled events "bubble up" from responder to responder
+            until they reach the root object (the screen)<br>
+          </li>
+        </ul>
+      </ul>
+      <ul>
+        <li><span style="font-style: italic;">ResignFirstResponder</span>
+          method on Responder objects<br>
+        </li>
+        <ul>
+          <li>Example in PhoneWord</li>
+        </ul>
+        <ul>
+          <li>Example in ControlFun, Ch. 4 of the textbook</li>
+        </ul>
+      </ul>
+    </ul>
+    <h2>UI Constraints</h2>
+    <p><br>
+      "&nbsp;&nbsp;&nbsp; Adaptive UI<br>
+      o&nbsp;&nbsp;&nbsp; Relative control placement<br>
+      o&nbsp;&nbsp;&nbsp; Adapts to different screen sizes and
+      orientations<br>
+      "&nbsp;&nbsp;&nbsp; Auto Layout (constraint) mode in Xamarin
+      Studio<br>
+      o&nbsp;&nbsp;&nbsp; Enabled by default<br>
+      <br>
+    </p>
+    <h2>References</h2>
+    <ul>
+      <li><a
+href="https://developer.apple.com/documentation/uikit/touches_presses_and_gestures/understanding_event_handling_responders_and_the_responder_chain"
+          target="_blank">Understanding Event Handling, Responders, and
+          the Responder Chain</a><br>
+        Learn how events are propagated through your app and how you
+        handle them<br>
+      </li>
+    </ul>
+    <ul>
+      <ul>
+      </ul>
+    </ul>
+    <p><br>
+    </p>
+    <br>
+    Back to <a
+href="https://lcc-cit.github.io/CS235IM-CourseMaterials/CS235IM_Syllabus.html"
+      target="_blank">Syllabus</a><br>
+    <hr>
+    <footer> <a rel="license"
+        href="http://creativecommons.org/licenses/by/4.0/"><img
+          alt="Creative Commons License" style="border-width:0"
+          src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a><br>
+      <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Xamarin
+
+
+
+
+
+
+        iOS App Dev Lecture Notes</span> by <a
+        xmlns:cc="http://creativecommons.org/ns#"
+        href="https://birdsbits.blog" property="cc:attributionName"
+        rel="cc:attributionURL">Brian Bird</a>, 2018, is licensed under
+      a <a rel="license"
+        href="http://creativecommons.org/licenses/by/4.0/">Creative
+        Commons Attribution 4.0 International License</a>. </footer>
+    <hr>
+  </body>
+</html>

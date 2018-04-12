@@ -198,7 +198,6 @@ code {
       </li>
       <ul>
         <li>.NET style event handler using a lambda expression<br>
-          <br>
           <code>&nbsp;&nbsp;&nbsp; public override void ViewDidLoad() <br>
             &nbsp;&nbsp;&nbsp; { <br>
             &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; base.ViewDidLoad(); <br>
@@ -213,7 +212,6 @@ code {
         <br>
         <li>Create events using the events tab of the properties dialog
           in the storyboard<br>
-          <br>
           <code>&nbsp;&nbsp;&nbsp; partial void
             someButton_TouchUpInside(UIButton sender)<br>
             &nbsp;&nbsp;&nbsp; {<br>
@@ -230,13 +228,19 @@ code {
         <li><span style="font-family: monospace;"><span
               style="font-family:
               &quot;Arial&quot;,&quot;Helvetica&quot;,&quot;sans-serif&quot;;"></span></span>A
-          corresponding method will be added to the appropriate ViewController.designer.cs
-          file<br>
-          <br>
-          <code>&nbsp;&nbsp;&nbsp; Action ("TouchUpInsideSomeButton:")]<br>
+          corresponding method will be added to the appropriate
+          ViewController.designer.cs file:<br>
+          <code>&nbsp;&nbsp;&nbsp; Action ("SomeButton_TouchUpInside:")]<br>
             &nbsp;&nbsp;&nbsp; [GeneratedCode ("iOS Designer", "1.0")]<br>
             &nbsp;&nbsp;&nbsp; partial void TouchUpInsideSomeButton
-            (UIKit.UIButton sender);</code><br>
+            (UIKit.UIButton sender);</code></li>
+        <li>And to the ViewController.cs file:<br>
+          <code>&nbsp;&nbsp;&nbsp; partial void SomeButton_TouchUpInside(UIButton
+            sender)<br>
+            &nbsp;&nbsp;&nbsp; {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Do something
+            here<br>
+            &nbsp;&nbsp;&nbsp; }</code><br>
         </li>
       </ul>
       <li>Responders</li>

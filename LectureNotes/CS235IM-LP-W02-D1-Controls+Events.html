@@ -189,15 +189,17 @@ code {
         </ul>
       </ul>
     </ul>
-    <h2>Events<br>
-    </h2>
+    <h2>Events</h2>
+    <p>Eith .NET style event handlers and iOS style Actions can be used.
+      They both accomplish the same thing.<br>
+    </p>
     <ul>
-      <li>Actions vs. .NET style events</li>
+      <li>.NET style event handlers<br>
+      </li>
       <ul>
         <li>.NET style event handler using a lambda expression<br>
-          (Example in PhoneWord, ViewController.cs, ViewDidLoad)</li>
-        <li><code>&nbsp;&nbsp;&nbsp; public override void ViewDidLoad()
-            <br>
+          <br>
+          <code>&nbsp;&nbsp;&nbsp; public override void ViewDidLoad() <br>
             &nbsp;&nbsp;&nbsp; { <br>
             &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; base.ViewDidLoad(); <br>
             &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
@@ -208,17 +210,34 @@ code {
             Do something here<br>
             &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }; <br>
             &nbsp;&nbsp;&nbsp; } </code></li>
+        <br>
         <li>Create events using the events tab of the properties dialog
           in the storyboard<br>
-          (Example in Ch. 4, Control Fun 2016)<br>
-        </li>
-        <li><code>&nbsp;&nbsp;&nbsp; partial void
+          <br>
+          <code>&nbsp;&nbsp;&nbsp; partial void
             someButton_TouchUpInside(UIButton sender)<br>
             &nbsp;&nbsp;&nbsp; {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Do
             something here<br>
             &nbsp;&nbsp;&nbsp; }<br>
           </code></li>
+      </ul>
+      <li>Actions</li>
+      <ul>
+        <li>Actions are created by double-clicking on a control and then
+          selecting the type of action to be implemented<br>
+        </li>
+        <li><span style="font-family: monospace;"><span
+              style="font-family:
+              &quot;Arial&quot;,&quot;Helvetica&quot;,&quot;sans-serif&quot;;"></span></span>A
+          corresponding method will be added to the appropriate ViewController.designer.cs
+          file<br>
+          <br>
+          <code>&nbsp;&nbsp;&nbsp; Action ("TouchUpInsideSomeButton:")]<br>
+            &nbsp;&nbsp;&nbsp; [GeneratedCode ("iOS Designer", "1.0")]<br>
+            &nbsp;&nbsp;&nbsp; partial void TouchUpInsideSomeButton
+            (UIKit.UIButton sender);</code><br>
+        </li>
       </ul>
       <li>Responders</li>
       <ul>
@@ -352,6 +371,7 @@ href="https://lcc-cit.github.io/CS235IM-CourseMaterials/CS235IM_Syllabus.html"
           alt="Creative Commons License" style="border-width:0"
           src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a><br>
       <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Xamarin
+
 
 
 

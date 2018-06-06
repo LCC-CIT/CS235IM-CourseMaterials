@@ -1,132 +1,2 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Apple Dev Cert Creation</title>
-  </head>
-  <body>
-    <h1>Adding an Apple Developer Certificate to XCode</h1>
-    <p>Whether you are developing using Visual Studio with the Xamarin
-      platform or using XCode you need a developer certificate from
-      Apple.<br>
-    </p>
-    <ol>
-      <li>Create a certificate</li>
-      <ol>
-        <li>Go to the <a href="https://developer.apple.com"
-            target="_blank">Apple Developer web site</a> and log in.</li>
-        <li>On the left side, click on "Certificates, IDs &amp;
-          Profiles"</li>
-        <li>In the upper-right click on the plus button</li>
-        <li>Select "iOS App Development", then click "Continue"<br>
-          <img
-src="file:///Users/admin/Desktop/Screen%20Shot%202018-03-21%20at%204.10.43%20PM.png"
-            alt="Add iOS Certificate" style="width: 392px; height:
-            273px;"></li>
-        <li>The next screen gives instructions for creating a
-          Certificate Signing Request (CSR). Read it and then open the
-          Keychain Access app.</li>
-        <ol style="list-style-type: lower-alpha;">
-          <li>For reference, this is the Keychain Access&nbsp; launcher
-            icon:<br>
-            <img
-src="file:///Users/admin/Desktop/Screen%20Shot%202018-03-21%20at%204.13.32%20PM.png"
-              alt="Keychain Access app" style="width: 133px; height:
-              136px;"><br>
-            <br>
-          </li>
-          <li>In the Keychain Access drop down menu, select Keychain
-            Access &gt; Certificate Assistant &gt; Request a Certificate
-            from a Certificate Authority<img
-src="file:///Users/admin/Desktop/Screen%20Shot%202018-03-21%20at%204.16.19%20PM.png"
-              alt="Request Certificate from Certificate Authority"
-              style="width: 567px; height: 178px;"><br>
-            <br>
-          </li>
-          <li>In the Certificate Information window, enter the following
-            information: <br>
-            <img
-src="file:///Users/admin/Desktop/Screen%20Shot%202018-03-21%20at%204.20.18%20PM.png"
-              alt="Certificate information window" style="width: 475px;
-              height: 443px;"><br>
-            <br>
-          </li>
-          <li>Save the CSR file to your computer. The file should be
-            named "CertificateSigningRequest.certSigningRequest"</li>
-        </ol>
-      </ol>
-    </ol>
-    <ol>
-      <ol start="6">
-        <li>Back on the Apple Developer web site,&nbsp; click "Continue"
-          and you will see this page:<br>
-          <img
-src="file:///Users/admin/Desktop/Screen%20Shot%202018-03-21%20at%204.24.05%20PM.png"
-            alt="Upload CSR file" style="width: 562px; height: 341px;
-            border: 2px solid;"><br>
-          <br>
-          Choose the file you just created and click "Continue" to
-          upload it.<br>
-          <br>
-        </li>
-        <li>Now you can download the certificate to your computer. Yes,
-          this seems kind of crazy! First you upload the signing
-          request, then you download the certificate.<br>
-          <img
-src="file:///Users/admin/Desktop/Screen%20Shot%202018-03-21%20at%204.29.08%20PM.png"
-            alt="Downlaod the certificate" style=" width: 575px; height:
-            369px; border: 2px solid;"><br>
-          <br>
-        </li>
-        <li>After downloading the file open the Finder to the download
-          location. The rest of the steps will be on your PC, not the
-          web site.</li>
-        <ol style="list-style-type: lower-alpha;">
-          <li>Double-click on the .cer file. This will open the dialog
-            below:<br>
-            <img
-src="file:///Users/admin/Desktop/Screen%20Shot%202018-03-21%20at%204.31.41%20PM.png"
-              alt="Add .cer to keychain" style="width: 545px; height:
-              309px;"><br>
-            <br>
-            Click "Add".<br>
-            <br>
-          </li>
-          <li>Now open XCode<br>
-            <img
-src="file:///Users/admin/Desktop/Screen%20Shot%202018-03-21%20at%205.26.12%20PM.png"
-              alt="XCode launcher icon" style="width: 131px; height:
-              139px;"><br>
-            <br>
-          </li>
-          <li>On the XCode menu, hen open "Preferences", then select the
-            "Accounts" tab and click the + on the bottom left<br>
-            <img
-src="file:///Users/admin/Desktop/Screen%20Shot%202018-03-21%20at%205.09.48%20PM.png"
-              alt="Add cert to Xcode" style="width: 652px; height:
-              449px;"><br>
-            <br>
-            Select "Apple ID" and click "Continue.<br>
-            <br>
-          </li>
-          <li>Enter your Apple ID and password<br>
-            <img
-src="file:///Users/admin/Desktop/Screen%20Shot%202018-03-21%20at%205.12.38%20PM.png"
-              alt="Enter Apple ID and password" style="width: 452px;
-              height: 133px;"><br>
-            <br>
-          </li>
-          <li>Now your developer account will show up in XCode<br>
-            <br>
-            <img
-src="file:///Users/admin/Desktop/Screen%20Shot%202018-03-21%20at%205.23.26%20PM.png"
-              alt="Account in XCode" style="width: 606px; height:
-              415px;"><br>
-          </li>
-        </ol>
-      </ol>
-    </ol>
-    That's it! Now you can use your developer license in XCode or Visual
-    Studio.
-  </body>
-</html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html>  <head>    <meta http-equiv="content-type" content="text/html; charset=UTF-8">    <title>Apple Dev Cert Creation</title>  </head>  <body>    <h1>Adding an Apple Developer Certificate to Xcode</h1>    <p>Whether you are developing using Visual Studio with the Xamarin platform      or using Xcode you need a developer certificate from Apple.<br>    </p>    <ol>      <li>Create a certificate</li>      <ol>        <li>Go to the <a href="https://developer.apple.com" target="_blank">Apple
+            Developer web site</a> and log in.</li>        <li>On the left side, click on "Certificates, IDs &amp; Profiles"</li>        <li>In the upper-right click on the plus button</li>        <li>Select "iOS App Development", then click "Continue"<br>          <img src="file:AppleDevAndDeviceRegImages/Screen%20Shot%202018-03-21%20at%204.10.43%20PM.png"            alt="Add iOS Certificate"            style="width: 392px; height:            273px;"></li>        <li>The next screen gives instructions for creating a Certificate          Signing Request (CSR). Read it and then open the Keychain Access app.</li>        <ol style="list-style-type: lower-alpha;">          <li>For reference, this is the Keychain Access&nbsp; launcher icon:<br>            <img src="file:AppleDevAndDeviceRegImages/Screen%20Shot%202018-03-21%20at%204.13.32%20PM.png"              alt="Keychain Access app"              style="width: 133px; height:              136px;"><br>            <br>          </li>          <li>In the Keychain Access drop down menu, select Keychain Access &gt;            Certificate Assistant &gt; Request a Certificate from a Certificate            Authority<img src="file:AppleDevAndDeviceRegImages/Screen%20Shot%202018-03-21%20at%204.16.19%20PM.png"              alt="Request Certificate from Certificate Authority"              style="width: 567px; height: 178px;"><br>            <br>          </li>          <li>In the Certificate Information window, enter the following            information: <br>            <img src="file:AppleDevAndDeviceRegImages/Screen%20Shot%202018-03-21%20at%204.20.18%20PM.png"              alt="Certificate information window"              style="width: 475px;              height: 443px;"><br>            <br>          </li>          <li>Save the CSR file to your computer. The file should be named            "CertificateSigningRequest.certSigningRequest"</li>        </ol>      </ol>    </ol>    <ol>      <ol start="6">        <li>Back on the Apple Developer web site,&nbsp; click "Continue" and you          will see this page:<br>          <img src="file:AppleDevAndDeviceRegImages/Screen%20Shot%202018-03-21%20at%204.24.05%20PM.png"            alt="Upload CSR file"            style="width: 562px; height: 341px;            border: 2px solid;"><br>          <br>          Choose the file you just created and click "Continue" to upload it.<br>          <br>        </li>        <li>Now you can download the certificate to your computer. Yes, this          seems kind of crazy! First you upload the signing request, then you          download the certificate.<br>          <img src="file:AppleDevAndDeviceRegImages/Screen%20Shot%202018-03-21%20at%204.29.08%20PM.png"            alt="Downlaod the certificate"            style=" width: 575px; height:            369px; border: 2px solid;"><br>          <br>        </li>        <li>After downloading the file open the Finder to the download location.          The rest of the steps will be on your PC, not the web site.</li>        <ol style="list-style-type: lower-alpha;">          <li>Double-click on the .cer file. This will open the dialog below:<br>            <img src="file:AppleDevAndDeviceRegImages/Screen%20Shot%202018-03-21%20at%204.31.41%20PM.png"              alt="Add .cer to keychain"              style="width: 545px; height:              309px;"><br>            <br>            Click "Add".<br>            <br>          </li>          <li>Now open XCode<br>            <img src="file:AppleDevAndDeviceRegImages/Screen%20Shot%202018-03-21%20at%205.26.12%20PM.png"              alt="XCode launcher icon"              style="width: 131px; height:              139px;"><br>            <br>          </li>          <li>On the XCode menu, hen open "Preferences", then select the            "Accounts" tab and click the + on the bottom left<br>            <img src="file:AppleDevAndDeviceRegImages/Screen%20Shot%202018-03-21%20at%205.09.48%20PM.png"              alt="Add cert to Xcode"              style="width: 652px; height:              449px;"><br>            <br>            Select "Apple ID" and click "Continue.<br>            <br>          </li>          <li>Enter your Apple ID and password<br>            <img src="file:AppleDevAndDeviceRegImages/Screen%20Shot%202018-03-21%20at%205.12.38%20PM.png"              alt="Enter Apple ID and password"              style="width: 452px;              height: 133px;"><br>            <br>          </li>          <li>Now your developer account will show up in XCode<br>            <br>            <img src="file:AppleDevAndDeviceRegImages/Screen%20Shot%202018-03-21%20at%205.23.26%20PM.png"              alt="Account in XCode"              style="width: 606px; height:              415px;"><br>          </li>        </ol>      </ol>    </ol>    That's it! Now you can use your developer license in Xcode or Visual Studio.  </body></html>

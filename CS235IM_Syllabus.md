@@ -139,6 +139,15 @@ The requirements for the term project will be presented during the first week of
 
 
 
+#### Weekly Learning Activities
+
+| Week  | Monday      | Tuesday        |      | Thursday  |      | Saturday                       |      |
+| ----- | ----------- | -------------- | ---- | --------- | ---- | ------------------------------ | ---- |
+| **1** |             |                |      |           |      | Reading quiz 1<br />Beta 1 due |      |
+| **2** | Code review | Reading quiz 2 |      | Lab 1 due |      | Beta 2 due<br />Lab 1 Graded   |      |
+
+
+
 ### Assessment and Grading
 
 Specific grading criteria will be applied to each of the labs, quizzes, and exams you will be working on in this class. Part of the lab involves a code review. Attendance is not graded.

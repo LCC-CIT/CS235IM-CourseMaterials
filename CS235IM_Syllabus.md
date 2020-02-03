@@ -5,11 +5,11 @@
 
 
 | Course    | Mobile Application Development: iOS |      | Instructor   | Brian Bird            |
-| --------- | ----------------------------------- | ---- | ------------ | --------------------- |
+| --------- | ----------------------------------- | ---- | :----------- | --------------------- |
 | CRN       | 33018                               |      | Email        | birdb@lanecc.edu      |
 | Credits   | 4                                   |      | Office       | Building 19, Room 152 |
 | Classroom | Building 19, Room 132               |      | Office Hours | M, W: 4:00 - 4:50     |
-| Lab       | Building 19, Room 135               |      |              | Tu, Th: 1:00 - 1:50   |
+| Lab       | Building 19, Room 135               |      |              | Tu, Th: 2:00 - 2:50   |
 
 
 
